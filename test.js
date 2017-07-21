@@ -16,6 +16,7 @@ app.get('/Campus', function (req, res) {
         }
         else {
             //anji
+            //punitha
             res.status(200).json({ recordset });
         }
     });
