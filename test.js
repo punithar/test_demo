@@ -15,6 +15,7 @@ app.get('/Campus', function (req, res) {
             res.status(500).send(err);
         }
         else {
+            //anji
             res.status(200).json({ recordset });
         }
     });
