@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors({ origin: '*' }));
 app.get('/Campus', function (req, res) {
-    var queryString = "select CampusId,CampusName,CollegeTypeId,CampusAddress,Latitude,Longitude from Campus";
+    var queryString = "select CampusId,CampusName,CollegeTypeId,CampusAddress,Latitude,Longitude,Accuracy from Campus";
     console.log(queryString);
     db.query(queryString, function (err, recordset) {
         if (err) {
@@ -19,6 +19,6 @@ app.get('/Campus', function (req, res) {
         }
     });
 });
-app.listen(200, function () {
-    console.log("nodejs app is listening port 200");
+app.listen(2000, function () {
+    console.log("nodejs app is listening port 2000");
 });
