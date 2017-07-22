@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors({ origin: '*' }));
 app.get('/Campus', function (req, res) {
-    var queryString = "select CampusId,CampusName,CollegeTypeId,CampusAddress,Latitude,Longitude,Accuracy from Campus";
+    var queryString = "select CampusId,CampusName,CollegeTypeId,CampusAddress,Latitude,Longitude from Campus";
    
     db.query(queryString, function (err, recordset) {
         if (err) {
